@@ -1,0 +1,211 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #9E9E9E;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* header  */
+
+.nav {
+    height: 44px;
+    width: 100%;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: flex-end; 
+    align-items: center;
+}
+
+.nav button {
+    margin: 30px;
+    font-size: 1.7rem;
+    border-radius: 10px;
+    width: 78px;
+    text-align: center;
+}
+
+.nav button:hover{
+    cursor: pointer;
+    background-color: #9b9595;
+}
+
+
+/* index.ejs  */
+
+.full {
+    padding: 78px 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main{
+    min-height: 400px;
+    width:fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(243 58 73);
+    border: 4px solid;
+    border-radius: 20px;
+    box-shadow: 5px 5px;
+}
+
+#first_h1{
+    font-size: 3.8rem;
+    margin: 30px;
+    text-align: center;
+    color: white;
+}
+
+#first_button {
+    height: 75px;
+    width: 154px;
+    border-radius: 20px;
+    font-size: 27px;
+    background-color: #9E9E9E;
+    margin: 20px;
+    box-shadow: 5px 5px;
+    border: 2px solid black;    
+}
+
+#first_button:hover {
+    cursor: pointer;
+    background-color: rgb(99, 98, 98);
+}
+
+/* work.ejs  */
+
+.full2{
+    padding: 50px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.full2 h1{
+    font-size: 2.1rem;
+    margin-bottom: 10px;
+    background-color: #413d41;
+    width: 503px;
+    text-align: center;
+    border-radius: 26px;
+    color: white;
+}
+
+.full2 h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    background-color: crimson;
+    text-align: center;
+    border-radius: 26px;
+    color: white;
+}
+
+.full2 .form .input1 {
+    height: 32px;
+    width: 435px;
+    border-radius: 9px;
+}
+
+
+.full2 .form .input2 {
+    width: 62px;
+    height: 32px;
+    border-radius: 9px;
+}
+
+.full2 .form .input2:hover{
+    cursor: pointer;
+    background-color: black;
+    color: white;
+}
+
+.full2 .js{
+    width: 700px;
+    background-color: #7ddfa8e3;
+    display: flex;
+    align-items: center;
+    margin: 8px;
+    height: 52px;
+    border-radius: 10px;
+}
+
+
+
+/* footer  */
+
+footer {
+    height: 43px;
+    margin-top: auto;
+    background-color: black;
+    color: white;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+/* work.ejs arrow to alert  */
+
+.arrow {
+    position: absolute;
+    top: 192px;
+    left: 35%;
+    transform: translateX(-50%);
+    width: 0px;
+    height: 10px;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid #f00;
+}
+
+.arrow::before {
+    content: "Fill_It";
+    position: absolute;
+    top: 20px;
+    left: 40%;
+    transform: translateX(-50%);
+    background-color: red;
+    color: #fff;
+    padding: 3px 9px;
+    border-radius: 4px;
+    font-size: 18px;
+    /* display: none; Initially hidden */
+}
+
+@keyframes fadeOut {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+}
+
+.message {
+    animation: fadeOut 2s ease-in-out; /* Set the duration of the animation */
+    animation-fill-mode: forwards;
+}
+
+.js input {
+    margin: 12px;
+}
+
+.js label{
+    margin: 5px;
+    font-size: 25px;
+}
+
+input[type=checkbox]:checked + label {
+    color: #1b2b50;
+    text-decoration: line-through;
+}
+

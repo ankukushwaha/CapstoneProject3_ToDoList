@@ -1,0 +1,33 @@
+<link rel="stylesheet" href="style.css" />
+<%- include("header.ejs") %>
+
+<div class="full2">
+    <div>
+        <h1>Work List</h1>
+        <% if(locals.DateName){ %>
+            <h2><%= DateName %></h2>
+        <% }else{ %>
+            <h2>Date</h2>
+        <%  } %>
+
+        <form action="/add1" method="post" class="form">
+            <input type=" text" name="text" placeholder="  New Item" class="input1">
+            <input type="submit" value="ADD" class="input2">
+
+            <!-- Display an alert if the 'alertMessage' variable is set -->
+            <% if (alertMsg) { %>
+                <div class="arrow message"></div>
+            <% } %>
+        </form>
+    </div>  
+
+      
+    <% for(var i=0;i<addTask.length;i++){ %>
+        <div class="js">
+            <input type="checkbox" class="contentToCross" name="checkbox">
+            <label for="contentToCross"><%= addTask[i] %></label>
+        </div>
+    <% } %>
+</div>
+
+<%- include("footer.ejs") %>
