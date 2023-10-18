@@ -209,3 +209,32 @@ input[type=checkbox]:checked + label {
     text-decoration: line-through;
 }
 
+@media screen and (max-width: 700px){
+
+    .nav {
+        height: 80px;
+    }
+
+    .full2{
+        padding: 150px 20px;
+    }
+    
+    .full2 h1{
+        margin-bottom: 20px;
+        width: 600px;
+    }
+    
+    .full2 h2 {
+        margin-bottom: 20px;
+    }
+    
+    .full2 .form .input1 {
+        width: 542px;
+    }
+}
+
+@media screen and (max-width: 400px){
+    .main{
+        min-height: 210px;
+    }
+}

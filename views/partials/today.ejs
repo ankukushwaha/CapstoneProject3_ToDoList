@@ -3,7 +3,7 @@
 
 <div class="full2">
     <div>
-        <h1>Today Tasks List</h1>
+        <h1><%= heading %> Tasks List</h1>
         <% if(locals.DateName){ %>
             <h2><%= DateName %></h2>
         <% }else{ %>
@@ -21,10 +21,12 @@
     </div> 
 
     <% for(var i=0;i<addTask.length;i++){ %>
+    <form action="/deleteToday" method="post">
         <div class="js">
-            <input type="checkbox" class="contentToCross" name="checkbox">
-            <label for="contentToCross"><%= addTask[i] %></label>
+            <input type="checkbox" class="contentToCross" name="checkbox" value="<%= addTask[i]._id %>" onChange="this.form.submit()">
+            <label for="contentToCross"><%= addTask[i].name %></label>
         </div>
+    </form>
     <% } %>
 </div>
 
