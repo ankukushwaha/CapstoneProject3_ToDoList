@@ -9,7 +9,7 @@ var port = 3000;
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({extended: true}));
 
-mongoose.connect("mongodb://127.0.0.1:27017/toDoListDB");
+mongoose.connect("mongodb+srv://ankurkushwaha7408:Kushwaha123@cluster0.8onnf8w.mongodb.net/toDoListDB",{useNewUrlParser: true});
 
 const toDoSchema = new mongoose.Schema({
     name: String
