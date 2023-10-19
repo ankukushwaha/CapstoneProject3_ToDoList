@@ -4,12 +4,12 @@ import mongoose from "mongoose";
 import _ from "lodash";
 
 const app = express();
-var port = 3000;
+var port = process.env.PORT || 3000;
 
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({extended: true}));
 
-mongoose.connect("mongodb+srv://ankurkushwaha7408:Kushwaha123@cluster0.8onnf8w.mongodb.net/toDoListDB",{useNewUrlParser: true});
+mongoose.connect("mongodb+srv://ankurkushwaha7408:Kushwaha123@cluster0.8onnf8w.mongodb.net/toDoListDB");
 
 const toDoSchema = new mongoose.Schema({
     name: String
